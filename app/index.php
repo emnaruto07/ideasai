@@ -1,5 +1,4 @@
 <?
-echo 'test';
 
 	require_once(__DIR__.'/../app/apiKeys.php');
 	
