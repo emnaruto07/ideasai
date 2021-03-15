@@ -11,39 +11,8 @@
 
 	$emailSponsorHTML="<strong>Sponsor: <a href=\"https://remoteok.io/hire-remotely?ref=ideasai\">Hiring remotely? Post a job to 1,000,000+ remote workers</a></strong><br/><br/>\n\n";
 
-	$bannedIdeas=array(
-		'pass',
-		'passed',
-		'dies',
-		'die',
-		'death',
-		'declutter',
-		'kill',
-		'accident',
-		'disabilities',
-		'disab',
-		'DNA',
-		'murder',
-		'rape',
-		'funeral',
-		'dementia',
-		'alzheimer',
-		'asperger',
-		'autis',
-		'cancer',
-		'baby',
-		'married',
-		'wedding',
-		'newlywed',
-		'kids',
-		'children',
-		'disease',
-		'pregnan',
-		'aids',
-		'cancer',
-		'hiv',
-		'transgender'
-	);
+	require_once(__DIR__.'/../app/nsfw.php');
+	$bannedIdeas=$config['nsfw'];
 
 	parse_str(file_get_contents("php://input"),$_DATA);
 
