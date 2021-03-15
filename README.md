@@ -1,6 +1,6 @@
 # IdeasAI
 
-IdeasAI is a GPT-3-powered business idea generator
+IdeasAI is a GPT-3-powered business idea generator, try it at https://ideasai.net
 
 The idea (lol) is to give you inspiration to make something cool, if you lack inspiration right now. Many ideas might not be perfect but they might give you the spark to start thinking to get to a really good idea further on.
 
