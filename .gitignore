@@ -1,0 +1,8 @@
+app/*.php
+!app/index.php
+!app/recalculateVotes.php
+!app/removeDuplicateVotes.php
+
+data/
+lib/
+git.txt
