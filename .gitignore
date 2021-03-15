@@ -1,6 +1,5 @@
 app/*.php
 !app/index.php
-!app/nsfw.php
 !app/recalculateVotes.php
 !app/removeDuplicateVotes.php
 
