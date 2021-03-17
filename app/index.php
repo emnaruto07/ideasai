@@ -93,8 +93,9 @@
 			$query->execute();
 			$emailCount=$query->fetchAll(PDO::FETCH_ASSOC)[0]['COUNT(*)'];
 
-
-			$randomIdea=getRandomIdea();
+			// <center idea>
+				$randomIdea=getRandomIdea();
+			// </center idea>
 
 
 
@@ -1699,7 +1700,7 @@ If you don't want to get these weekly ideas anymore, <a href=\"https://ideasai.n
 		while(!$foundRandomIdeaNotVotedOnYet) {
 			if(mt_rand(0,1)==1) {
 				// show random in last 24 hours
-				$query=$gpt3ideasDb->prepare("SELECT * FROM gpt3ideas WHERE id IS NOT :id AND epoch_created>".strtotime("-48 hours")." AND votes>=50 ORDER BY RANDOM() ASC LIMIT 1");
+				$query=$gpt3ideasDb->prepare("SELECT * FROM gpt3ideas WHERE id IS NOT :id AND epoch_created>".strtotime("-7 days")." ORDER BY RANDOM() ASC LIMIT 1");
 				$query->bindValue(':id',$_GET['id']);
 				$query->execute();
 				$randomIdea=$query->fetchAll(PDO::FETCH_ASSOC);
